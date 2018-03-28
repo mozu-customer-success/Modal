@@ -1,0 +1,11 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div class="remodal-bg">
+      {% comment %} content {% endcomment %}
+    </div>
+    <div class="remodal"></div>
+  </body>
+</html>

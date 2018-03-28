@@ -1,0 +1,82 @@
+.remodal {
+  .close {
+    opacity: 1;
+    position: absolute;
+    float: none;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, 50%);
+    .exit1-circle {
+      cursor: pointer;
+      &:hover {
+        color: @color1;
+      }
+    }
+  }
+  .emailModal {
+    form#email-form {
+      fieldset {
+        .g-recaptcha {
+          text-align: center;
+          &>div {
+            display: inline-block;
+          }
+        }
+        .label-container {
+          text-align: left;
+        }
+        div.wrapper {
+          margin: 0 auto;
+          @media only screen and (min-width: 480px) and (max-width: 767px) {
+            width: 300px;
+          }
+          @media only screen and (min-width: 768px) {
+            .input-container:nth-child(1) {
+              padding-left: 0;
+            }
+            .input-container:nth-child(2) {
+              padding-right: 0;
+            }
+          }
+          @media only screen and (max-width: 767px) {
+            max-width: 300px;
+            .input-container {
+              padding: 0;
+              &:nth-child(1) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          margin-bottom: 10px;
+          textarea, input {
+            width: 100%;
+          }
+          textarea {
+            height: 74px;
+          }
+        }
+        section.form-controls {
+          vertical-align: top;
+        }
+        .validation-message {
+          color: rgb(92, 0, 0);
+        }
+        @media only screen and (max-width: 767px) {
+          text-align: left;
+          section.form-controls {
+            text-align: center;
+          }
+          
+          p {
+            textarea, input {
+              width: 100%;
+              max-width: 100%;
+            }
+          }
+          text-align: center;
+        }
+      }
+    }
+  }
+}
