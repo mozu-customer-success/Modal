@@ -1,6 +1,8 @@
 require([
+  'modules/jquery-mozu',
+  'modules/api',
   'modules/quick-view'
-], function(ProductQuickView) {
+], function($, api, ProductQuickView) {
   var log = function(value) {
     var pageContext = require.mozuData('pageContext');
     if(!pageContext || !pageContext.isDebugMode) return value;

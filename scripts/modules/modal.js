@@ -4,10 +4,12 @@ define([
   'modules/jquery-mozu',
   'vendor/remodal'
 ], function(Hypr, _, $) {
-  var log = function(val) {
-    if(require.mozuData('pagecontext').isDebugMode) console.log(val);
-    return val;
-  };
+  var log = function (value) {
+    var pageContext = require.mozuData('pageContext');
+    if (!pageContext || !pageContext.isDebugMode) return value;
+    console.log(value);
+    return value;
+  }
   var Modal = function(options) {
     this.modalOptions = options;
   };
